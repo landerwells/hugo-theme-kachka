@@ -197,14 +197,14 @@ dd {
     margin-bottom: 0.50em;
 }
 
-/* Footer styling - change #postamble to footer */
-footer {
-    padding-top: 1.5em;
-}
-
-footer p, footer a {
-    color: #999999;
-    line-height: 1.25em;
-    margin: 0;
-    text-align: right;
-}
+/* /* Footer styling - change #postamble to footer */ */
+/* footer { */
+/*     padding-top: 1.5em; */
+/* } */
+/**/
+/* footer p, footer a { */
+/*     color: #999999; */
+/*     line-height: 1.25em; */
+/*     margin: 0; */
+/*     text-align: right; */
+/* } */
