@@ -1,2 +1,13 @@
-<h1>{{ site.Title }}</h1>
-{{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+<header>
+  <nav>
+    <a href="{{ "/" | relURL }}" class="email-link">{{ .Site.Params.email }}</a>
+    <span> | </span>
+    <a href="{{ .Site.Params.github }}" target="_blank">github</a>
+    <span> | </span>
+    <a href="{{ .Site.Params.linkedin }}" target="_blank">linkedin</a>
+    <span> | </span>
+    <a href="{{ "notes" | relURL }}">notes</a>
+    <span> | </span>
+    <a href="{{ "blog" | relURL }}">blog</a>
+  </nav>
+</header>
