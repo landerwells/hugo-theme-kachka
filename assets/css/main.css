@@ -159,6 +159,19 @@ code {
     font-weight: 400;
 }
 
+pre::before {
+    color: #cccccc;
+    float: left;
+    text-align: right;
+    font-weight: 300;
+    width: 3.0em;
+    margin-left: -4.25em;
+    font-variant: small-caps;
+    content: "";
+}
+pre.src-lisp::before { content: "lisp"; }
+pre.src-org::before { content: "org"; }
+
 pre {
     color: #00008b;
     background-color: #fbfbfb;
@@ -170,6 +183,36 @@ pre {
     font-family: "Roboto Mono", sans-serif;
     font-weight: 300;
     border-left: 2px dotted #00008b;
+}
+pre.src {
+    position: relative;
+    overflow: visible;
+}
+
+/* --- Code folding --- */
+details {
+    color: rgba(48,63,159, 1.00);
+    background: #fbfbfb;
+    border: 1px solid rgba(48,63,159, 1.00);
+    border-radius: 3px;
+    padding:  0.25em;
+    margin-bottom: 1.0em;
+}
+details pre {
+    border: 0;
+}
+details pre.src-lisp::before { content: ""; }
+summary {
+    outline: 0;
+    color: rgba(48,63,159, 1.00);
+}
+summary::after {
+    font-size: 0.85em;
+    color: rgba(48,63,159, 0.25);
+    display: inline-block;
+    float: right;
+    content: "Click to fold/unfold";
+    padding-right:  0.5em;
 }
 
 /* Tables */
