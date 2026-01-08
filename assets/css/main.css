@@ -171,6 +171,9 @@ pre::before {
 }
 pre.src-lisp::before { content: "lisp"; }
 pre.src-org::before { content: "org"; }
+pre.src-cpp::before { content: "c++"; }
+pre.src-c::before { content: "c"; }
+pre.src-rust::before { content: "rust"; }
 
 pre {
     color: #00008b;
