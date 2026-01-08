@@ -152,45 +152,80 @@ h3 {
   padding-top: 5px;
 }
 
-/* Code blocks */
-code {
-    background-color: #f9f9f9;
-    font-family: "Roboto Mono", sans-serif;
-    font-weight: 400;
+/* --- Code blocks --- */
+code, pre {
+    font-family: "Roboto Mono", monospace;
+    font-weight: 300;
+    line-height: 1.35em;
 }
 
+/* Inline code */
+code {
+    background-color: #f9f9f9;
+    font-weight: 400; /* keep inline code slightly bolder */
+    padding: 0.1em 0.25em;
+    border-radius: 3px;
+}
+
+/* Pre blocks */
+pre {
+    position: relative;
+    background-color: #fbfbfb;
+    color: #00008b;
+    overflow: auto;
+    margin: 0;
+    padding: 0.25em 0.5em;
+    border-left: 2px dotted #00008b;
+}
+
+/* Language labels */
 pre::before {
     color: #cccccc;
     float: left;
     text-align: right;
     font-weight: 300;
-    width: 3.0em;
+    width: 3em;
     margin-left: -4.25em;
     font-variant: small-caps;
     content: "";
 }
-pre.src-lisp::before { content: "lisp"; }
-pre.src-org::before { content: "org"; }
-pre.src-cpp::before { content: "c++"; }
-pre.src-c::before { content: "c"; }
-pre.src-rust::before { content: "rust"; }
+pre.src-lisp::before  { content: "lisp"; }
+pre.src-org::before   { content: "org"; }
+pre.src-cpp::before   { content: "c++"; }
+pre.src-c::before     { content: "c"; }
+pre.src-rust::before  { content: "rust"; }
 
-pre {
-    color: #00008b;
-    background-color: #fbfbfb;
-    overflow: auto;
-    margin: 0em;
-    padding: 0.25em;
-    padding-left: 0.5em;
-    line-height: 1.35em;
-    font-family: "Roboto Mono", sans-serif;
-    font-weight: 300;
-    border-left: 2px dotted #00008b;
-}
+/* Optional: specific class for pre.src to allow folding or extra styling */
 pre.src {
-    position: relative;
     overflow: visible;
 }
+
+/* --- Syntax highlighting tokens --- */
+.token.comment, 
+.token.prolog, 
+.token.doctype, 
+.token.cdata {
+    color: #999999;
+    font-style: italic;
+}
+
+.token.keyword           { color: #303F9F; font-weight: bold; }
+.token.string            { color: #A31515; }
+.token.number            { color: #098658; }
+.token.function          { color: #795E26; }
+.token.operator          { color: #000000; }
+.token.variable          { color: #1C00CF; }
+.token.type              { color: #2B91AF; }
+.token.constant          { color: #36ACAA; }
+.token.class-name        { color: #2B91AF; font-weight: bold; }
+.token.namespace         { color: #795E26; font-style: italic; }
+.token.attr-name         { color: #00008B; }
+.token.attr-value        { color: #A31515; }
+.token.tag               { color: #303F9F; font-weight: bold; }
+.token.regex             { color: #E90; }
+.token.boolean           { color: #098658; font-weight: bold; }
+.token.deleted           { background-color: #ffdddd; }
+.token.inserted          { background-color: #ddffdd; }
 
 /* --- Code folding --- */
 details {
